@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Host</title>
+  </head>
+  <body style="margin: 0;">
+    <div id="app"></div>
+    <script>
+        let script = document.createElement('script');
+        script.src = "http://localhost:1234/index.js"
+        script.onload = function () {
+          renderApp('app', { greetings: 'Your microfrontend app created with Dulo' })
+        }
+
+        document.head.appendChild(script)
+    </script>
+  </body>
+</html>
