@@ -1,14 +1,14 @@
 {
-  "name": "my-dulo-app",
+  "name": "vanilla-typescript",
   "version": "1.0.0",
-  "description": "A vanilla js Dulo template",
-  "source": "src/index.js",
+  "description": "A vanilla ts Dulo template",
+  "source": "src/index.ts",
   "author": "Jared Brown",
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/index.js",
+    "start": "parcel src/index.ts",
     "dev": "parcel host/index.html -p 3000",
-    "build": "parcel build src/index.js"
+    "build": "parcel build src/index.ts"
   },
   "dependencies": {
     "parcel": "^2.2.1"
