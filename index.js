@@ -9,7 +9,7 @@ const FRAMEWORKS = [
   {
     name: 'vanilla',
     color: chalk.hex('#f7e017'),
-    typescript: false,
+    typescript: true,
   },
   {
     name: 'react',
@@ -19,7 +19,7 @@ const FRAMEWORKS = [
 ]
 
 const TEMPLATES = [];
-FRAMEWORKS.map((framework) => {
+FRAMEWORKS.forEach((framework) => {
   TEMPLATES.push(framework.name);
   if (framework.typescript) {
     TEMPLATES.push(`${framework.name}-typescript`)
@@ -34,8 +34,8 @@ async function init() {
   const args = yargs(process.argv.slice(2)).argv;
 
   let targetDirectory = args._[0];
-  const template = args.template || args.t
-  const templateIsValid = template && typeof template === 'string' && TEMPLATES.includes(template);
+  const template = args.template || args.t;
+  const templateIsValid = typeof template === 'string' && TEMPLATES.includes(template);
 
   const defaultProjectName = targetDirectory ?? 'my-dulo-app';
 
@@ -63,10 +63,10 @@ async function init() {
             ` is not empty. Remove existing files and continue?`
         },
         {
-          type: template && TEMPLATES.includes(template) ? null : 'select',
+          type: template && templateIsValid ? null : 'select',
           name: 'framework',
           message:
-            templateIsValid
+            !template
               ? 'Select a framework:'
               : `"${template}" isn't a valid template. Please choose from below: `,
           initial: 0,
@@ -106,7 +106,7 @@ async function init() {
     fs.mkdirSync(root)
   }
 
-  const duloTemplate = (typescript) ? `${framework.name}-typescript` : framework.name;
+  const duloTemplate = (template && templateIsValid) ? template : (typescript) ? `${framework.name}-typescript` : framework.name;
   const templateDirectory = path.join(path.resolve(), `templates/${duloTemplate}`);
 
   const write = (file, content) => {
