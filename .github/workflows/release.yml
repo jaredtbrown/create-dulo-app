@@ -18,4 +18,4 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GH_PAT_TOKEN: ${{secrets.GITHUB_TOKEN}}
