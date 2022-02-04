@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --experimental-json-modules
 import chalk from 'chalk';
 import fs from 'fs';
 import path from 'path';
