@@ -14,7 +14,7 @@ const FRAMEWORKS = [
   {
     name: 'react',
     color: chalk.hex('#61dafb'),
-    typescript: false,
+    typescript: true,
   },
 ]
 
