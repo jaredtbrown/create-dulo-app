@@ -3,5 +3,18 @@
   "version": "0.1.0",
   "main": "index.js",
   "author": "Jared Brown <brown.jared25@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-json-modules index.js"
+  },
+  "bin": "./index.js",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "prompts": "^2.4.2",
+    "yargs": "^17.3.1"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.8"
+  }
 }
