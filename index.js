@@ -2,6 +2,7 @@
 import chalk from 'chalk';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import prompts from 'prompts';
 import yargs from 'yargs';
 
@@ -107,7 +108,7 @@ async function init() {
   }
 
   const duloTemplate = (template && templateIsValid) ? template : (typescript) ? `${framework.name}-typescript` : framework.name;
-  const templateDirectory = path.join(path.resolve(), `templates/${duloTemplate}`);
+  const templateDirectory = path.join(path.dirname(fileURLToPath(import.meta.url)), `templates/${duloTemplate}`);
 
   const write = (file, content) => {
     const targetPath = renameFiles[file]
