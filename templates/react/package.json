@@ -1,0 +1,18 @@
+{
+  "name": "vanilla-typescript",
+  "version": "1.0.0",
+  "description": "A vanilla ts Dulo template",
+  "source": "src/index.js",
+  "author": "Jared Brown",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.js",
+    "dev": "parcel host/index.html -p 3000",
+    "build": "parcel build src/index.js"
+  },
+  "dependencies": {
+    "parcel": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
