@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.js",
-    "dev": "parcel host/index.html -p 3000",
+    "dev": "parcel host/* -p 3000",
     "build": "parcel build src/index.js"
   },
   "dependencies": {
