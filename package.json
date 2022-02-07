@@ -1,6 +1,6 @@
 {
-  "name": "@jaredtbrown/dulo",
-  "version": "0.1.2",
+  "name": "@jaredtbrown/create-micro-app",
+  "version": "0.1.0-beta",
   "main": "index.js",
   "author": "Jared Brown <brown.jared25@gmail.com>",
   "license": "MIT",
@@ -19,5 +19,5 @@
   "devDependencies": {
     "@types/yargs": "^17.0.8"
   },
-  "repository": "git://github.com/jaredtbrown/dulo.git"
+  "repository": "git://github.com/jaredtbrown/create-micro-app.git"
 }
