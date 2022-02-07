@@ -32,31 +32,6 @@ const renameFiles = {
   _gitignore: '.gitignore'
 }
 
-const tryGitInit = () => {
-  try {
-    execSync('git --version', { stdio: 'ignore' });
-
-    execSync('git init', { stdio: 'ignore' });
-    return true;
-  } catch (e) {
-    console.warn('Git repo not initialized', e);
-    return false;
-  }
-}
-
-const tryGitCommit = () => {
-  try {
-    execSync('git add -A', { stdio: 'ignore' });
-    execSync('git commit -m "Initialize project using Create Dulo App"', {
-      stdio: 'ignore',
-    });
-    return true;
-  } catch (e) {
-    console.warn('Git commit not created', e);
-    return false;
-  }
-}
-
 async function init() {
   const args = yargs(process.argv.slice(2)).argv;
 
@@ -157,17 +132,6 @@ async function init() {
   pkg.name = projectName || templateDirectory
 
   write('package.json', JSON.stringify(pkg, null, 2))
-
-  if (root !== process.cwd()) {
-    execSync(`cd ${path.relative(process.cwd(), root)}`, { stdio: 'ignore' });
-  }
-  const initialized = tryGitInit();
-  if (initialized) {
-    tryGitCommit();
-  }
-  if (root !== process.cwd()) {
-    execSync(`cd ..`, { stdio: 'ignore' })
-  }
 
   const pkgInfo = pkgFromUserAgent(process.env.npm_config_user_agent)
   const pkgManager = pkgInfo ? pkgInfo.name : 'npm'
