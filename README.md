@@ -1,7 +1,7 @@
 # Create Dulo App
 A starter kit for creating modular micro frontends. It uses [Parcel](https://github.com/parcel-bundler/parcel) to bundle your app down to a single JavaScript file artifact that can be used by consumer applications to host your micro frontend. Dulo is very unopinionated and as extensible as Parcel is for building web applications.
 
-If something doesn’t work, [please file an issue]().
+If something doesn’t work, [please file an issue](https://github.com/jaredtbrown/create-dulo-app/issues).
 If you have questions or need help, please ask in [GitHub Discussions]().
 
 ## Getting Started
