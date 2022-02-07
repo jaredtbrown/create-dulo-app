@@ -5,7 +5,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import prompts from 'prompts';
 import yargs from 'yargs';
-import { execSync } from 'child_process';
 
 const FRAMEWORKS = [
   {
