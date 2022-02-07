@@ -1,5 +1,5 @@
 {
-  "name": "@jaredtbrown/create-micro-app",
+  "name": "create-dulo-app",
   "version": "0.1.0-beta",
   "main": "index.js",
   "author": "Jared Brown <brown.jared25@gmail.com>",
