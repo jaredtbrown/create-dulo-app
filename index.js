@@ -35,9 +35,6 @@ const renameFiles = {
 const tryGitInit = () => {
   try {
     execSync('git --version', { stdio: 'ignore' });
-    if (isInGitRepository() || isInMercurialRepository()) {
-      return false;
-    }
 
     execSync('git init', { stdio: 'ignore' });
     return true;
