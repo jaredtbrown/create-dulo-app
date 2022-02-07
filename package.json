@@ -1,6 +1,6 @@
 {
   "name": "create-dulo-app",
-  "version": "0.4.0-beta",
+  "version": "0.5.0-beta",
   "main": "index.js",
   "author": "Jared Brown <brown.jared25@gmail.com>",
   "license": "MIT",
