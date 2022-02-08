@@ -128,7 +128,7 @@ async function init() {
 
   const { default: pkg } = await import(path.join(templateDirectory, `package.json`))
 
-  pkg.name = projectName || templateDirectory
+  pkg.name = projectName || targetDirectory;
 
   write('package.json', JSON.stringify(pkg, null, 2))
 
