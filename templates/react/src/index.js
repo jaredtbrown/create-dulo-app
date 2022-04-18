@@ -1,6 +1,8 @@
-import ReactDOM from 'react-dom';
+import { createReactApp } from '@jaredtbrown/dulo';
+
 import App from './App';
 
-window.renderApp = (rootElementId, props) => {
-  ReactDOM.render(<App {...props} />, document.getElementById(rootElementId));
-}
+createReactApp({
+  name: 'app',
+  component: (props) => <App {...props} />
+})
