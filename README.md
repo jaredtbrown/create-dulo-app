@@ -26,6 +26,18 @@ Dulo currently supports building micro frontends using a runtime integration app
 
 The micro frontend artifact defines an entry function on the window that host applications can use to render that micro frontend when needed. That global function requires only one parameter, the id of a dom element to bind that micro frontend to.
 
+Dulo provides a helper function to make it easy to define that entry level function:
+```javascript
+createApp({
+  name: 'app',
+  component: function () {
+    console.log("Hello, World!")
+  }
+})
+```
+
+The `name` property is used to define your global function. So, if the `name` is set to `"app"`, the global function will be called `renderApp`.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -45,6 +57,23 @@ The micro frontend artifact defines an entry function on the window that host ap
 ```
 
 The entry level function can also add additional params if a micro frontend needs to support additional configuration.
+
+```javascript
+// Micro front end
+createApp({
+  name: 'app',
+  component: function (greeting) {
+    console.log(greeting)
+  }
+})
+
+...
+
+// Consumer application
+renderApp('app', 'Hello, World! Again!');
+```
+
+If more flexibility is needed, you can define your global function right on the window yourself:
 
 ```javascript
 // Entry level function
