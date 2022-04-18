@@ -11,6 +11,7 @@
     "build": "parcel build src/index.ts"
   },
   "dependencies": {
+    "@jaredtbrown/dulo": "^0.1.6-beta",
     "parcel": "^2.2.1"
   }
 }

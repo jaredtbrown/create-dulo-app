@@ -10,6 +10,5 @@ const app = (props) => {
 
 createApp({
   name: 'app',
-  rootElementId: 'app',
   component: app,
 })
