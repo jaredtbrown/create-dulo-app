@@ -11,9 +11,7 @@
     "build": "parcel build src/index.js"
   },
   "dependencies": {
-    "@jaredtbrown/dulo": "^0.1.7-beta",
-    "parcel": "^2.2.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@jaredtbrown/dulo": "^0.1.8-beta",
+    "parcel": "^2.2.1"
   }
 }

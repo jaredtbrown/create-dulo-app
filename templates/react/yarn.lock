@@ -218,16 +218,16 @@
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
-"@jaredtbrown/dulo@^0.1.7-beta":
-  version "0.1.7-beta"
-  resolved "https://npm.pkg.github.com/download/@jaredtbrown/dulo/0.1.7-beta/1f08fcedd292da21d763e2aa13b3d34d8bcc3156e68fd11a83c1c590258cfa0c#64f33a2d9e3b0abea88e7354f9f067538651d14f"
-  integrity sha512-6Q4+p7mrX3mzFjNfUr76+SmfYIrU2alXCaODSdfOnJDCeN5rrNQ4kmriS5CyKlLEKkNnXFAKrCMHoOL9bMcUcg==
+"@jaredtbrown/dulo@^0.1.8-beta":
+  version "0.1.8-beta"
+  resolved "https://npm.pkg.github.com/download/@jaredtbrown/dulo/0.1.8-beta/1e9b02afe2238d8a360c89f2fa04e97f267260a9cc8661530c55575b630edaba#29517d8f008af88347295371ce932a9a3f648d4a"
+  integrity sha512-qjInnrAUrUaxQZmQkcW6pZ7qGHDX8/+ATVCrZSmMofeaC/RBQxjoKV1BUtQTJfsCh/fEQhmkUkwSsDOaysQCKw==
   dependencies:
     lodash "^4.17.21"
+    react "^17.0.2"
     react-dom "^17.0.2"
   optionalDependencies:
     "@types/react-dom" "^17.0.11"
-    react "^17.0.2"
 
 "@jridgewell/resolve-uri@^3.0.3":
   version "3.0.4"
