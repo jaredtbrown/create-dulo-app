@@ -17,5 +17,9 @@
   "devDependencies": {
     "@types/yargs": "^17.0.8"
   },
-  "repository": "git://github.com/jaredtbrown/create-dulo-app.git"
+  "repository": "git://github.com/jaredtbrown/create-dulo-app.git",
+  "engines": {
+    "npm": ">=8.3.0",
+    "node": ">=16.4.0"
+  }
 }
