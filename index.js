@@ -127,7 +127,7 @@ async function init() {
     write(file)
   }
 
-  const { default: pkg } = await import(path.join(templateDirectory, `package.json`))
+  const { default: pkg } = await import(path.join(templateDirectory, `package.json`), { assert: { type: "json", } })
 
   pkg.name = projectName || targetDirectory;
 
